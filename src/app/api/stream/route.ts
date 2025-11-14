@@ -14,6 +14,14 @@ export async function POST(request: Request) {
       prompt,
     })
 
+    text.usage.then((usage) => {
+      console.log({
+        inputTokens: usage.inputTokens,
+        outputTokens: usage.outputTokens,
+        totalTokens: usage.totalTokens,
+      })
+    })
+
     return text.toUIMessageStreamResponse()
   } catch (error) {
     console.error("Error streaming text", error)
