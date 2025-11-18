@@ -7,7 +7,7 @@ import { pokemonUISchema } from "@/app/api/structured-array/schema"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 
-export default function StructuredDataPage() {
+export default function StructuredArrayPage() {
   const [type, setType] = useState("")
 
   const { object, submit, isLoading, error, stop } = useObject({
